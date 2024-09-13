@@ -10,10 +10,10 @@
 ############################
 
 # Name of website
-title: My website
+title: GeoXYZ
 
 # Your name to show in the footer
-author: Some Person
+author: Yang Chen
 
 ###############################################
 # --- List of links in the navigation bar --- #
@@ -50,14 +50,11 @@ round-avatar: true
 # You can change the order that they show up on the page by changing the order here.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  email: "someone@example.com"
+  email: "yangchen@nnu.edu.cn"
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
-  facebook: deanattali
-  github: daattali
-  twitter: daattali
-  patreon: DeanAttali
-  youtube: "@daattali"
-  whatsapp: 15551212
+  github: "https://github.com/CubicsYang"
+  ORCID: 0000-0003-1283-4363
+  google-scholar: "https://scholar.google.com/citations?user=ObcghREAAAAJ&hl=zh-CN"
 #  medium: yourname
 #  reddit: yourname
 #  linkedin: daattali
