@@ -52,9 +52,9 @@ round-avatar: true
 social-network-links:
   email: "yangchen@nnu.edu.cn"
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
-  github: "https://github.com/CubicsYang"
-  ORCID: 0000-0003-1283-4363
-  google-scholar: "https://scholar.google.com/citations?user=ObcghREAAAAJ&hl=zh-CN"
+  github: "CubicsYang"
+  ORCID: "0000-0003-1283-4363"
+  google-scholar: "ObcghREAAAAJ&hl"
 #  medium: yourname
 #  reddit: yourname
 #  linkedin: daattali
@@ -82,7 +82,7 @@ social-network-links:
 
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
-rss-description: This website is a virtual proof that I'm awesome
+# rss-description: This website is a virtual proof that I'm awesome
 
 ###########################
 # --- General options --- #
