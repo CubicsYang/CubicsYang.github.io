@@ -23,7 +23,7 @@ navbar-links:
   About Me: "aboutme"
   Resources:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
-  Papers: "Papers"
+  Publications: "Publications"
 
 ################
 # --- Logo --- #
