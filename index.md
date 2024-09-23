@@ -1,10 +1,9 @@
 ---
 layout: home
-title: A GISer
+title: 
 subtitle: Working towards open geospatial science
 ---
 
 - Contact
-yangchen@nnu.edu.cn
-
+  yangchen@nnu.edu.cn
 - News
