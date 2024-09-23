@@ -5,7 +5,7 @@ subtitle: Working towards open geospatial science
 ---
 
 ## Contact
-  - yangchen@nnu.edu.cn
+  yangchen@nnu.edu.cn
 ## Research interests
   - DEM (Terrain modelling)
   - Urban Mophology
