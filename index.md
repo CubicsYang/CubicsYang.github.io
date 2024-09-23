@@ -1,9 +1,13 @@
 ---
 layout: home
-title: 
+title: A PhD candicate of GIS
 subtitle: Working towards open geospatial science
 ---
 
 - Contact
   yangchen@nnu.edu.cn
-- News
+- Research interests
+  - DEM (Terrain modelling)
+  - Urban Mophology
+  - Open Geospatial Data Science
+  - Geomorphometry (Terrain Analysis) 
