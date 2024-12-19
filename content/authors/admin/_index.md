@@ -48,16 +48,22 @@ interests:
   - Geomorphometry
 
 education:
+  - area: Visting Scholar in Urban Analytics Lab
+    institution: College of Design and Environment, National University of Singapore
+    date_start: 2024-11-01
+    date_end: 2025-11-01
+    summary: |
+      Supervised by [Prof. Filip Biljecki](https://filipbiljecki.com/).
   - area: PhD Candidate in Cartography and Geographic Information Systems
     institution: School of Geography, Nanjing Normal University, China
-    date_start: 2021
-    date_end: 2027
+    date_start: 2021-09-01
+    date_end: 2027-06-30
     summary: |
       Supervised by [Prof. Guoan Tang](https://scholar.google.com/citations?user=QP5oEWMAAAAJ).
   - area: BSc Geographic Information Science
     institution: Zhejiang Agriculture & Forest University, China
-    date_start: 2017
-    date_end: 2021
+    date_start: 2017-09-01
+    date_end: 2021-06-30
     summary: |
       Courses included:
       - GIS
@@ -92,17 +98,17 @@ education:
 skills:
   - name: Technical Skills
     items:
-      - name: Python & WebGIS
+      - name: Python
         description: ''
         percent: 80
         icon: code-bracket
-      - name: Data Science
+      - name: Data Science  &  SQL 
         description: ''
         percent: 60
         icon: chart-bar
-      - name: SQL & Spatial Database
+      - name: Spatial Database & WebGIS
         description: ''
-        percent: 60
+        percent: 70
         icon: circle-stack
   - name: Hobbies
     color: '#eeac02'
@@ -127,14 +133,14 @@ languages:
 #   Add/remove as many awards below as you like.
 #   Only `title`, `awarder`, and `date` are required.
 #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
-awards:
-  - title: Neural Networks and Deep Learning
-    url: https://www.coursera.org/learn/neural-networks-deep-learning
-    date: '2023-11-25'
-    awarder: Coursera
-    icon: coursera
-    summary: |
-      I studied the foundational concept of neural networks and deep learning. By the end, I was familiar with the significant technological trends driving the rise of deep learning; build, train, and apply fully connected deep neural networks; implement efficient (vectorized) neural networks; identify key parameters in a neural network’s architecture; and apply deep learning to your own applications.
+# awards:
+#   - title: Neural Networks and Deep Learning
+#     url: https://www.coursera.org/learn/neural-networks-deep-learning
+#     date: '2023-11-25'
+#     awarder: Coursera
+#     icon: coursera
+#     summary: |
+#       I studied the foundational concept of neural networks and deep learning. By the end, I was familiar with the significant technological trends driving the rise of deep learning; build, train, and apply fully connected deep neural networks; implement efficient (vectorized) neural networks; identify key parameters in a neural network’s architecture; and apply deep learning to your own applications.
 ---
 
 ## About Me
