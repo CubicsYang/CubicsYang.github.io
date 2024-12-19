@@ -1,16 +1,21 @@
 ---
-title: "An example journal article"
+title: "Refining urban morphology: An explainable machine learning method for estimating footprint-level building height"
 authors:
-- admin
-- Robert Ford
+- Yang Chen
+- Wenjie Sun
+- Ling Yang
+- Xin Yang
+- Xingyu Zhou
+- Xin Li
+- Sijin Li
+- Guoan Tang
 author_notes:
-- "Equal contribution"
-- "Equal contribution"
-date: "2015-09-01T00:00:00Z"
-doi: ""
+
+date: "2024-10-01T00:00:00Z"
+doi: "10.1016/j.scs.2024.105635"
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2017-01-01T00:00:00Z"
+publishDate: "2024-10-01T00:00:00Z"
 
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
@@ -18,23 +23,25 @@ publishDate: "2017-01-01T00:00:00Z"
 publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name.
-publication: "*Journal of Source Themes, 1*(1)"
-publication_short: ""
+publication: "*Sustainable Cities and Society*"
+publication_short: "SCS"
 
-abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.
+abstract: Fine-grained 3D buildings with diverse morphology are a cornerstone of urban physical structures and have profound implications for sustainable city development. However, accurately estimating building height at the footprint-level is a challenge. This study bridged this gap by using random forest models to integrate the elevation, geometry and shape attributes of individual buildings, further refining those with spatial aggregation. It considered over one million buildings across 10 large Chinese cities and trained two-types models that demonstrated commendable performance in city-specific (the mean absolute error (MAE) ranged from 3.43 m to 5.06 m) and combined (MAE = 4.68 m) models. Results revealed that the current dataset had a finer urban morphology compared with existing datasets and showed outstanding generalisability in method transfer and feature ablation tests. By incorporating Shapley values, we explored the features' global and local impacts. The explainable results demonstrated that building area was the most impactful feature, and the elevation-dimension features were particularly beneficial in estimating high-rise buildings. Using the fine-grained 3D buildings, we explored the connections between explicit morphology differences and implicit contexts in cities. Overall, our work is an endeavour to estimate footprint-level building height as fuel for refining urban morphology and enabling sustainable city studies.
 
 # Summary. An optional shortened abstract.
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
+summary: This study bridged this gap by using random forest models to integrate the elevation, geometry and shape attributes of individual buildings, further refining those with spatial aggregation.
 
 tags:
-- Source Themes
-featured: false
+- building height
+- urban morphology
+- explainable machine learning
+featured: true
 
 # links:
 # - name: ""
 #   url: ""
-url_pdf: http://arxiv.org/pdf/1512.04133v1
-url_code: 'https://github.com/HugoBlox/hugo-blox-builder'
+url_pdf: 
+url_code: 'https://github.com/CubicsYang/Footprint_Building_Height_Estimation'
 url_dataset: ''
 url_poster: ''
 url_project: ''
@@ -45,7 +52,7 @@ url_video: ''
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/jdD8gXaTZsc)'
+  caption: 'Zoom-in of the building height estimation results'
   focal_point: ""
   preview_only: false
 
@@ -61,15 +68,15 @@ projects: []
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
-slides: example
+slides: “”
 ---
 
 {{% callout note %}}
 Click the *Cite* button above to demo the feature to enable visitors to import publication metadata into their reference management software.
 {{% /callout %}}
-
+<!-- 
 {{% callout note %}}
 Create your slides in Markdown - click the *Slides* button to check out the example.
 {{% /callout %}}
 
-Add the publication's **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://docs.hugoblox.com/content/writing-markdown-latex/).
+Add the publication's **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://docs.hugoblox.com/content/writing-markdown-latex/). -->

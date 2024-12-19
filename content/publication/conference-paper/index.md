@@ -1,23 +1,25 @@
 ---
-title: 'An example conference paper'
+title: 'Mapping Global Basic Landforms Using 30-meter DEMs'
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here
 # and it will be replaced with their full name and linked to their profile.
 authors:
-  - admin
-  - Robert Ford
+  - Chen, Yang 
+  - Yang, Xin
+  - Li, Sijin
+  - Tang, Guoan
 
 # Author notes (optional)
 author_notes:
-  - 'Equal contribution'
-  - 'Equal contribution'
+  # - 'Equal contribution'
+  # - 'Equal contribution'
 
-date: '2013-07-01T00:00:00Z'
+date: '2023-12-11T00:00:00Z'
 doi: ''
 
 # Schedule page publish date (NOT publication's date).
-publishDate: '2017-01-01T00:00:00Z'
+publishDate: '2023-12-11T00:00:00Z'
 
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
@@ -25,16 +27,19 @@ publishDate: '2017-01-01T00:00:00Z'
 publication_types: ['paper-conference']
 
 # Publication name and optional abbreviated publication name.
-publication: In *Hugo Blox Builder Conference*
-publication_short: In *ICW*
+publication: In *2023 AGU Fall Meeting*
+publication_short: In *AGU*
 
-abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.
+abstract:  The basic landforms are the fundamental units of the Earth's surface, and their mapping is essential for understanding the Earth's surface processes and landform evolution. However, the global mapping of basic landforms is still a challenge due to the lack of high-resolution DEMs. In this study, we proposed a new method to map global basic landforms using 30-meter DEMs. The method consists of three steps, (1) extracting the basic landforms from the DEMs, (2) classifying the basic landforms into different types, and (3) mapping the global basic landforms. The results show that the proposed method can effectively map the global basic landforms with high accuracy. The mapped basic landforms can be used for various applications, such as landform classification, landform evolution, and landform change detection.
 
 # Summary. An optional shortened abstract.
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
 
 tags:
-  - Large Language Models
+  - Landform Mapping
+  - DEMs
+  - Basic Landforms
+  - Global Mapping
 
 # Display this page in the Featured widget?
 featured: true
@@ -45,18 +50,18 @@ featured: true
 #   url: http://example.org
 
 url_pdf: ''
-url_code: 'https://github.com/HugoBlox/hugo-blox-builder'
-url_dataset: 'https://github.com/HugoBlox/hugo-blox-builder'
+url_code: ''
+url_dataset: 'https://zenodo.org/records/13187969'
 url_poster: ''
-url_project: ''
+url_project: 'https://jsgeounion.njnu.edu.cn'
 url_slides: ''
-url_source: 'https://github.com/HugoBlox/hugo-blox-builder'
-url_video: 'https://youtube.com'
+url_source: ''
+url_video: ''
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/pLCdAaMFLTE)'
+  caption: 'Overview of the global basic landforms'
   focal_point: ''
   preview_only: false
 
@@ -66,7 +71,7 @@ image:
 #   E.g. `internal-project` references `content/project/internal-project/index.md`.
 #   Otherwise, set `projects: []`.
 projects:
-  - example
+  - DDE
 
 # Slides (optional).
 #   Associate this publication with Markdown slides.
