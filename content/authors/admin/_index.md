@@ -43,9 +43,9 @@ profiles:
     url: https://www.researchgate.net/profile/Yang-Chen-405
 
 interests:
-  - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+  - Artificial Geomorphology
+  - Urban Morphology
+  - Geomorphometry
 
 education:
   - area: PhD Candidate in Cartography and Geographic Information Systems
@@ -53,17 +53,16 @@ education:
     date_start: 2021
     date_end: 2027
     summary: |
-      Supervised by [Prof. Guoan Tang](https://example.com).
+      Supervised by [Prof. Guoan Tang](https://scholar.google.com/citations?user=QP5oEWMAAAAJ).
   - area: BSc Geographic Information Science
     institution: Zhejiang Agriculture & Forest University, China
     date_start: 2017
     date_end: 2021
     summary: |
-
       Courses included:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      - GIS
+      - Geomatics
+      - Urban Planning
 # work:
 #   - position: Director of Cloud Infrastructure
 #     company_name: GenCoin
@@ -140,4 +139,6 @@ awards:
 
 ## About Me
 
-Chien Shiung Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Yang Chen is a PhD candidate at Nanjing Normal University, China, with expertise in GIS, Remote Sensing, and Cartography, as well as an interdisciplinary background in geomorphology and terrain modeling.
+His research focuses on urban modeling and urban morphology by leveraging multi-source geospatial data, such as street view imagery, digital elevation models, and remote sensing imagery.
+Recently, Yang’s work has concentrated on estimating building heights at the footprint level using machine learning methods and reconstructing the 3D typology of road networks on a large scale.
