@@ -9,10 +9,10 @@ design:
 
 # Page sections
 sections:
-  - block: publication
+  - block: collection
     content:
-      title: Selected Projects
-      text: I enjoy making things. Here are some papers that have been published on over the years.
+      title: Publications
+      text: Here are some papers that have been published on over the years.
       filters:
         folders:
           - publication
