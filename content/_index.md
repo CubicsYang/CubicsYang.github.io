@@ -49,7 +49,7 @@ sections:
       filters:
         folders:
           - publication
-        featured_only: false
+        featured_only: true
     design:
       view: article-grid
       columns: 1
@@ -82,7 +82,7 @@ sections:
       # Page type to display. E.g. post, talk, publication...
       page_type: post
       # Choose how many pages you would like to display (0 = all pages)
-      count: 3
+      count: 2
       # Filter on criteria
       filters:
         author: ""

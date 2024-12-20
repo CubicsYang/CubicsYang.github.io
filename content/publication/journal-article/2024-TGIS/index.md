@@ -1,5 +1,5 @@
 ---
-title: "Refining urban morphology: An explainable machine learning method for estimating footprint-level building height"
+title: "A new hierarchical analysis framework of building heights: Towards a more intuitive understanding of 3D urban structure"
 authors:
 - Yang, Ling
 - Zhou, Xingyu
