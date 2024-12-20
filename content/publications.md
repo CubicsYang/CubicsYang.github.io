@@ -16,8 +16,9 @@ sections:
       filters:
         folders:
           - publication
+      count: 0
     design:
       view: compact
       fill_image: false
-      columns: 1
+      columns: 3
 ---
