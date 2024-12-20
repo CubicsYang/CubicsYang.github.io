@@ -17,7 +17,7 @@ sections:
         folders:
           - publication
     design:
-      view: article-grid
+      view: grid
       fill_image: false
-      columns: 2
+      columns: 1
 ---
