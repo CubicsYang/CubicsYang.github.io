@@ -40,6 +40,8 @@ sections:
         I apply a range of qualitative and quantitative methods to comprehensively investigate the urban issues and artificial landscape.
         
         Please reach out to collaborate 😃
+
+        One hour coding a day, keep the bugs away. 🐞
     design:
       columns: '1'
   - block: collection
