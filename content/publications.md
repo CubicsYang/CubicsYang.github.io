@@ -17,7 +17,7 @@ sections:
         folders:
           - publication
     design:
-      view: grid
+      view: compact
       fill_image: false
       columns: 1
 ---
