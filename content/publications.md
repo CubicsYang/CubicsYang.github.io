@@ -1,5 +1,5 @@
 ---
-title: 'Projects'
+title: 'Publications'
 date: 2024-05-19
 type: landing
 
@@ -9,15 +9,15 @@ design:
 
 # Page sections
 sections:
-  - block: collection
+  - block: publication
     content:
-      title: Projects
-      text: I enjoy making things. Here are projects that I have worked on over the years.
+      title: Selected Projects
+      text: I enjoy making things. Here are some papers that have been published on over the years.
       filters:
         folders:
-          - project
+          - publication
     design:
       view: article-grid
       fill_image: false
-      columns: 1
+      columns: 2
 ---
