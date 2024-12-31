@@ -35,7 +35,7 @@ header:
     show_search: true
     show_theme_chooser: true
     logo:
-      text: "Yang Chen Blog"
+      text: "Yang Chen's Blog"
       image: 'assets/images/logo.png'
 # Site footer
 footer:
