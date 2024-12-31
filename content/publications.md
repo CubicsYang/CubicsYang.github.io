@@ -18,7 +18,7 @@ sections:
           - publication
       count: 0
     design:
-      view: compact
+      view: citation
       fill_image: false
       columns: 3
 ---
