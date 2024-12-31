@@ -18,7 +18,7 @@ sections:
           - publication
       count: 0
     design:
-      view: citation
+      view: article-grid
       fill_image: false
       columns: 3
 ---
