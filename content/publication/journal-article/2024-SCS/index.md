@@ -40,9 +40,9 @@ featured: true
 # links:
 # - name: ""
 #   url: ""
-url_pdf: 
+url_pdf: ''
 url_code: 'https://github.com/CubicsYang/Footprint_Building_Height_Estimation'
-url_dataset: ''
+url_dataset: 'https://www.geodata.cn/data/datadetails.html?dataguid=135869909769675&docId=151'
 url_poster: ''
 url_project: ''
 url_slides: ''
@@ -71,9 +71,6 @@ projects: []
 slides: “”
 ---
 
-{{% callout note %}}
-Click the *Cite* button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-{{% /callout %}}
 <!-- 
 {{% callout note %}}
 Create your slides in Markdown - click the *Slides* button to check out the example.

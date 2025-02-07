@@ -11,7 +11,7 @@ authors:
 author_notes:
 
 date: "2024-12-31T00:00:00Z"
-doi: "10.1016/j.scs.2024.105635"
+doi: "https://doi.org/10.1016/j.jenvman.2024.123940"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2024-12-31T00:00:00Z"

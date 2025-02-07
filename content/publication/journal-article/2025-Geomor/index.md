@@ -12,7 +12,7 @@ authors:
 author_notes:
 
 date: "2025-01-27T00:00:00Z"
-doi: "0.1016/j.geomorph.2025.109629"
+doi: "10.1016/j.geomorph.2025.109629"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2025-01-27T00:00:00Z"
