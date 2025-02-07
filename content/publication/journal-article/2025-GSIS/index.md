@@ -6,7 +6,7 @@ authors:
 - Haoyu Cao
 - Yingchao Ren
 - Sijin Li
-- '*Yang Chen*'
+- Yang Chen
 - Guoan Tang
 author_notes:
 
