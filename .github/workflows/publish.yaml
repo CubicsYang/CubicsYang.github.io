@@ -70,3 +70,5 @@ jobs:
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v2
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3.1.0  # Update to the latest version
