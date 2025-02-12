@@ -41,7 +41,7 @@ featured: false
 # links:
 # - name: ""
 #   url: ""
-url_pdf: 
+url_pdf: ''
 url_code: 'https://github.com/CubicsYang/Road_Elevation_DSM'
 url_dataset: ''
 url_poster: ''
