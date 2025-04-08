@@ -48,8 +48,8 @@ interests:
   - Geomorphometry
 
 education:
-  - area: Visting Scholar in Urban Analytics Lab
-    institution: College of Design and Environment, National University of Singapore
+  - area: Visiting Scholar in Urban Analytics Lab
+    institution: College of Design and Engineering, National University of Singapore
     date_start: 2024-11-01
     date_end: 2025-11-01
     summary: |
@@ -147,4 +147,4 @@ languages:
 
 Yang Chen is a PhD candidate at Nanjing Normal University, China, with expertise in GIS, Remote Sensing, and Cartography, as well as an interdisciplinary background in geomorphology and terrain modeling.
 His research focuses on urban modeling and urban morphology by leveraging multi-source geospatial data, such as street view imagery, digital elevation models, and remote sensing imagery.
-Recently, Yang’s work has concentrated on estimating building heights at the footprint level using machine learning methods and reconstructing the 3D typology of road networks on a large scale.
+Recently, Yang’s work has concentrated on estimating building heights at the footprint level using machine learning methods and reconstructing the 3D typology of road networks on a large scale. He is also involved in projects that integrate urban analytics with environmental sustainability. He aims to contribute to sustainable urban development through innovative data-driven solutions.
