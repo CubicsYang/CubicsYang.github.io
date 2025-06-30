@@ -1,7 +1,7 @@
 ---
 title: "Refining urban morphology: An explainable machine learning method for estimating footprint-level building height"
 authors:
-- Yang Chen
+- '<strong>Yang Chen</strong>'
 - Wenjie Sun
 - Ling Yang
 - Xin Yang
