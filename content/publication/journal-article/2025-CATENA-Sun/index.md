@@ -38,7 +38,7 @@ tags:
 - Landform mapping
 - Digital elevation model
  
-featured: true
+featured: false
 
 # links:
 # - name: ""

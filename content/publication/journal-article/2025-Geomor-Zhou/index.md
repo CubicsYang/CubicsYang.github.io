@@ -1,13 +1,13 @@
 ---
 title: "Delineating individual alluvial fans and morphological analysis based on digital elevation models"
 authors:
-- Zhou, Xingyu
-- Chen, Yang
-- Sun, Wenjie
-- Yang, Xin
-- Wang, Yanxiang
-- Li, Chenrui
-- Tang, Guoan
+- Xingyu Zhou
+- Yang Chen
+- Wenjie Sun
+- Xin Yang
+- Yanxiang Wang
+- Chenrui Li
+- Guoan Tang
 
 author_notes:
 

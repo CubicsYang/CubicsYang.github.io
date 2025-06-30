@@ -1,12 +1,12 @@
 ---
 title: "A new hierarchical analysis framework of building heights: Towards a more intuitive understanding of 3D urban structure"
 authors:
-- Yang, Ling
-- Zhou, Xingyu
-- Yang, Xin
-- Chen, Yang
-- Zhang, Haiping
-- Na, Jiaming
+- Ling Yang
+- Xingyu Zhou
+- Xin Yang
+- Yang Chen
+- Haiping Zhang
+- Jiaming Na
 author_notes:
 
 date: "2023-12-28T00:00:00Z"

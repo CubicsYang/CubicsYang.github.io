@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Yang Chen (陈阳)
+title: Yang Chen
 
 # Name pronunciation (optional)
 name_pronunciation: 
@@ -43,7 +43,6 @@ profiles:
     url: https://www.researchgate.net/profile/Yang-Chen-405
 
 interests:
-  - Artificial Geomorphology
   - Urban Morphology
   - Geomorphometry
 
@@ -145,6 +144,6 @@ languages:
 
 ## About Me
 
-Yang Chen is a PhD candidate at Nanjing Normal University, China, with expertise in GIS, Remote Sensing, and Cartography, as well as an interdisciplinary background in geomorphology and terrain modeling.
+Yang CHEN (陈阳) is a PhD candidate at Nanjing Normal University, China, with expertise in GIS, Remote Sensing, and Cartography, as well as an interdisciplinary background in geomorphology and terrain modeling.
 His research focuses on urban modeling and urban morphology by leveraging multi-source geospatial data, such as street view imagery, digital elevation models, and remote sensing imagery.
 Recently, Yang’s work has concentrated on estimating building heights at the footprint level using machine learning methods and reconstructing the 3D typology of road networks on a large scale. He is also involved in projects that integrate urban analytics with environmental sustainability. He aims to contribute to sustainable urban development through innovative data-driven solutions.

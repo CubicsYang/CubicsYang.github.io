@@ -35,7 +35,7 @@ sections:
       title: '📚 My Research'
       subtitle: ''
       text: |-
-        Use this area to speak to my mission. I'm a scholar in the Digital Terrain Analytics team at Nanjing Normal University. And now, I am a visiting scholar at the UAL, National University of Singapore. My research focuses on the intersection of Geography, Computer Science, and Urban Science.
+        I'm a scholar in the Digital Terrain Analytics team at Nanjing Normal University. And now, I am a visiting scholar at the UAL, National University of Singapore. My research focuses on the intersection of Geography, Computer Science, and Urban Science.
 
         I apply a range of qualitative and quantitative methods to comprehensively investigate the urban issues and artificial landscape.
         

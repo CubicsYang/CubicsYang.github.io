@@ -1,17 +1,17 @@
 ---
 title: "Is 3D building morphology really related to land surface temperature? Insights from a new homogeneous unit"
 authors:
-- Yang, Ling 
-- Chen, Yang 
-- Li, Yue 
-- Zhu, Hui 
-- Yang, Xin
-- Li, Sijin
-- Tang, Guoan
+- Ling Yang
+- Yang Chen
+- Yue Li
+- Hui Zhu
+- Xin Yang
+- Sijin Li
+- Guoan Tang
 author_notes:
 
 date: "2024-12-01T00:00:00Z"
-doi: "10.1016/j.buildenv.2024.1121015"
+doi: "10.1016/j.buildenv.2024.112101"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2024-12-01T00:00:00Z"
