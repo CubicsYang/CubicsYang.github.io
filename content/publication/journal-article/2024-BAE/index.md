@@ -35,7 +35,7 @@ tags:
 - Land surface temperature
 - Spatial unitSpatial scale
 - MAUP
-featured: true
+featured: False
 
 # links:
 # - name: ""
