@@ -19,6 +19,6 @@ About [UAL](https://ual.sg/about/), this research group was established in 2019 
 
 Their mission is to leverage and make sense of big geospatial data at different scales for urban applications and catalyse the development of spatial data infrastructures and digital twins in the realm of smart cities and the built environment. We are particularly interested in the interface of emerging urban datasets such as street-level imagery, dynamic/sensor data, and 3D city models with the state of the art of artificial intelligence to solve contemporary urban challenges and provide a strong foundation to advance urban informatics. Crowdsourcing plays an important role in our research, as we follow and contribute to the vibrant and impressive developments in Volunteered Geographic Information (VGI) and engage such data in our advancements.
 
-In UAL, my research focus on the from street-level imagrey to perceive urban slope (terrain, road, building relief and ...)
+In UAL, my research focus on the from street-level imagery to perceive urban slope (terrain, road, building relief and ...)
 
 
