@@ -41,6 +41,8 @@ profiles:
     url: https://orcid.org/my-orcid?orcid=0000-0003-1283-4363
   - icon: academicons/researchgate
     url: https://www.researchgate.net/profile/Yang-Chen-405
+  - icon: brands/linkedin
+    url: www.linkedin.com/in/yang-chen-ab2b15338
 
 interests:
   - Urban Morphology
