@@ -42,11 +42,12 @@ profiles:
   - icon: academicons/researchgate
     url: https://www.researchgate.net/profile/Yang-Chen-405
   - icon: brands/linkedin
-    url: www.linkedin.com/in/yang-chen-ab2b15338
+    url: https://www.linkedin.com/in/yang-chen-ab2b15338
 
 interests:
-  - Urban Morphology
+  - 3D Urban Analytics
   - Geomorphometry
+  - Urban Morphology
 
 education:
   - area: Visiting Scholar in Urban Analytics Lab
@@ -134,14 +135,17 @@ languages:
 #   Add/remove as many awards below as you like.
 #   Only `title`, `awarder`, and `date` are required.
 #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
-# awards:
-#   - title: Neural Networks and Deep Learning
-#     url: https://www.coursera.org/learn/neural-networks-deep-learning
-#     date: '2023-11-25'
-#     awarder: Coursera
-#     icon: coursera
-#     summary: |
-#       I studied the foundational concept of neural networks and deep learning. By the end, I was familiar with the significant technological trends driving the rise of deep learning; build, train, and apply fully connected deep neural networks; implement efficient (vectorized) neural networks; identify key parameters in a neural network’s architecture; and apply deep learning to your own applications.
+awards:
+  - title: National Scholarship of China
+    date: '2025-11-01'
+    awarder: Ministry of Education of the People's Republic of China
+    summary: |
+      This is the highest scholarship awarded to students in Chinese universities. It is given to students who demonstrate outstanding academic performance, leadership qualities, and contributions to their university and community. Only 0.2% of students receive this prestigious award each year.
+  - title: 3MT (Three Minute Thesis) Competition - Excellence Award
+    date: '2025-12-23'
+    awarder: Jiangsu Provincial Department of Education, China
+    summary: | 
+      Awarded the Excellence Award in the 2025 Jiangsu Provincial Finals of the 3MT (Three Minute Thesis) Competition, showcasing exceptional research communication skills. Total participants: 62 selected graduate students from high-level (双一流) universities across Jiangsu Province.
 ---
 
 ## About Me
