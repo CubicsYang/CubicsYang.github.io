@@ -2,7 +2,7 @@
 title: "Delineating individual alluvial fans and morphological analysis based on digital elevation models"
 authors:
 - Xingyu Zhou
-- Yang Chen
+- admin
 - Wenjie Sun
 - Xin Yang
 - Yanxiang Wang

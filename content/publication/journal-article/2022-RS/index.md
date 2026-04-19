@@ -1,7 +1,7 @@
 ---
 title: "An Automatic Approach to Extracting Large-Scale Three-Dimensional Road Networks Using Open-Source Data"
 authors:
-- Yang, Chen 
+- admin
 - Xin, Yang
 - Ling, Yang
 - Jiayu, Feng

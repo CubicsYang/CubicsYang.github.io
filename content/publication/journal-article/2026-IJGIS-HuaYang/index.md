@@ -6,7 +6,7 @@ authors:
 - Wufan Zhao
 - Jizhe Xia
 - Haoran Wang
-- Yang Chen
+- admin
 - Liyang Xiong
 - Guoan Tang
 author_notes:

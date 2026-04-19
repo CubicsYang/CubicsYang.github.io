@@ -2,7 +2,7 @@
 title: "Understanding the hydrological valley landscape: A multi-scenario adaptive framework for delineating valley floors"
 authors:
 - Wenjie Sun
-- Yang Chen
+- admin
 - Xingyu Zhou
 - Xin Yang
 - Junfei Ma

@@ -2,7 +2,7 @@
 title: "Is 3D building morphology really related to land surface temperature? Insights from a new homogeneous unit"
 authors:
 - Ling Yang
-- Yang Chen
+- admin
 - Yue Li
 - Hui Zhu
 - Xin Yang

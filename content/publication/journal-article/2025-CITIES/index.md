@@ -1,7 +1,7 @@
 ---
 title: "Vertical 15-minute city: Modeling urban density and functional mix with multi-source geospatial data"
 authors:
-- Yang Chen
+- admin
 - Xin Yang
 - Xin Li
 - Ling Yang

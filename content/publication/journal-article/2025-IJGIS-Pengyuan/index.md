@@ -2,7 +2,7 @@
 title: "A graph neural network for small-area estimation: integrating spatial regularisation, heterogeneous spatial units, and Bayesian inference"
 authors:
 - Pengyuan Liu
-- Yang Chen
+- admin
 - Xiucheng Liang
 - Hao Li
 - Filip Biljecki

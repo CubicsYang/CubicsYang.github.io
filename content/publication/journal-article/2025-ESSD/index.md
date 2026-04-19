@@ -4,7 +4,7 @@ authors:
 - Xin Yang
 - Sijin Li
 - Junfei Ma
-- Yang Chen
+- admin
 - Xingyu Zhou
 - Fayuan Li
 - Liyang Xiong

@@ -2,7 +2,7 @@
 title: "DEM-based sand dune analysis: Identification and morphological regionalization in the Grand Erg Oriental"
 authors:
 - Hui Zhu
-- Yang Chen
+- admin
 - Xin Yang
 - Hong Wei
 - Chenrui Li

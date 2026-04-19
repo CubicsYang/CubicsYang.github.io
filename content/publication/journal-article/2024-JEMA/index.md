@@ -3,7 +3,7 @@ title: "Assessing the influence of geo-environmental factors on discontinuous gu
 authors:
 - Chenrui Li
 - Xin Yang
-- Yang Chen
+- admin
 - Xingyu Zhou
 - Sijin Li
 - Xujia Cui

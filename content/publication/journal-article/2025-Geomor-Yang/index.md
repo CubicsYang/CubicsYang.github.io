@@ -1,7 +1,7 @@
 ---
 title: "Characterizing spatial patterns and regionalization of anthropogenic landforms using multi-source geospatial data: Insights from Loess Plateau of China"
 authors:
-- Yang Chen
+- admin
 - Xin Yang
 - Huangjunxi Fu
 - Chenrui Li
