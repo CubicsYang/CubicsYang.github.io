@@ -35,7 +35,6 @@ tags:
 - Hilly city
 - Computer vision
 - 3D Urban analytics
-
 featured: True
 
 # links:
@@ -44,7 +43,7 @@ featured: True
 url_pdf: 'https://ual.sg/publication/2026-ijgis-vision-2-slope/2026-ijgis-vision-2-slope.pdf'
 url_code: 'https://github.com/CubicsYang/Vision2Slope'
 url_dataset: ''
-url_poster: 'vision2slope-poster-yang.jpg'
+url_poster: ''
 url_project: 'https://github.com/CubicsYang/Vision2Slope'
 url_slides: ''
 url_source: ''

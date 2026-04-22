@@ -1,7 +1,7 @@
 ---
-title: Vision2Slope: estimating urban road slopes with street view imagery
+title: "Vision2Slope: estimating urban road slopes with street view imagery"
 date: 2026-04-01
-external_link: 
+external_link: ""
 tags:
   - Road slope
   - Street view imagery
