@@ -39,7 +39,7 @@ tags:
 - Digital elevation models
 - Earth system science
 
-featured: true
+featured: false
 
 # links:
 # - name: ""

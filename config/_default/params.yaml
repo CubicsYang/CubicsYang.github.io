@@ -36,7 +36,7 @@ header:
     show_theme_chooser: true
     logo:
       text: "Yang Chen's Homepage"
-      image: 'assets/images/icon.png'
+      image: 'media/icon.png'
 # Site footer
 footer:
   copyright:
