@@ -12,7 +12,7 @@ sections:
   - block: collection
     content:
       title: Publications
-      text: Here are some papers that I have worked and been published on over the years.
+      text: Peer-reviewed journal articles and conference contributions.
       filters:
         folders:
           - publication

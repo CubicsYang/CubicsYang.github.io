@@ -20,7 +20,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Ph.D Student
+role: PhD Candidate
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
@@ -38,7 +38,7 @@ profiles:
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=ObcghREAAAAJ
   - icon: academicons/orcid
-    url: https://orcid.org/my-orcid?orcid=0000-0003-1283-4363
+    url: https://orcid.org/0000-0003-1283-4363
   - icon: academicons/researchgate
     url: https://www.researchgate.net/profile/Yang-Chen-405
   - icon: brands/linkedin
@@ -61,7 +61,7 @@ education:
     date_start: 2021-09-01
     date_end: 2027-06-30
     summary: |
-      Supervised by [Prof. Guoan Tang](https://scholar.google.com/citations?user=QP5oEWMAAAAJ).
+      Supervised by Prof. Guoan Tang.
   - area: BSc Geographic Information Science
     institution: Zhejiang Agriculture & Forest University, China
     date_start: 2017-09-01
@@ -119,7 +119,7 @@ skills:
       - name: Basketball
         description: ''
         percent: 99.999
-        icon: basketball
+        icon: custom/basketball
       - name: Photography
         description: ''
         percent: 80
@@ -136,16 +136,26 @@ languages:
 #   Only `title`, `awarder`, and `date` are required.
 #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
 awards:
-  - title: National Scholarship of China
+  - title: President Scholarship
+    date: '2026-01-01'
+    date_start: '2026-01-01'
+    awarder: Nanjing Normal University
+  - title: Excellence Award, 3MT (Three Minute Thesis) Competition
+    date: '2025-12-23'
+    date_start: '2025-12-23'
+    awarder: Jiangsu Provincial Department of Education, China
+    summary: |
+      Awarded at the 3MT competition of the Second Academic Forum of Jiangsu Graduate Students, where 62 graduate students selected from high-level (双一流) universities across Jiangsu Province presented their research.
+  - title: National Scholarship
     date: '2025-11-01'
+    date_start: '2025-11-01'
     awarder: Ministry of Education of the People's Republic of China
     summary: |
-      This is the highest scholarship awarded to students in Chinese universities. It is given to students who demonstrate outstanding academic performance, leadership qualities, and contributions to their university and community. Only 0.2% of students receive this prestigious award each year.
-  - title: 3MT (Three Minute Thesis) Competition - Excellence Award
-    date: '2025-12-23'
-    awarder: Jiangsu Provincial Department of Education, China
-    summary: | 
-      Awarded the Excellence Award in the 2025 Jiangsu Provincial Finals of the 3MT (Three Minute Thesis) Competition, showcasing exceptional research communication skills. Total participants: 62 selected graduate students from high-level (双一流) universities across Jiangsu Province.
+      The highest-level national scholarship for students in Chinese universities, recognizing outstanding academic performance and research achievements.
+  - title: Excellent Ph.D. Research Plan
+    date: '2025-01-01'
+    date_start: '2025-01-01'
+    awarder: Nanjing Normal University
 ---
 
 ## About Me

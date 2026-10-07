@@ -12,7 +12,7 @@ sections:
   - block: collection
     content:
       title: Projects
-      text: I enjoy making things. Here are projects that I have worked on over the years.
+      text: Research software, platforms and data systems I have developed or contributed to.
       filters:
         folders:
           - project

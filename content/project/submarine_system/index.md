@@ -1,15 +1,13 @@
 ---
-title: Marine polymetallic mineral systems
+title: Marine Polymetallic Mineral Data Management System
 date: 2019-05-01
-external_link: 
 tags:
   - WebGIS
   - Management System
   - Marine Polymetallic Mineral
 ---
 
-A project to build a Marine Polymetallic Mineral System. 
-The system is designed to provide a platform for the storage of semi-strcuture polymetallic mineral data. 
-The system is based on the WebGIS technology and is designed to be user-friendly and easy to use.
+A WebGIS-based management system for marine polymetallic mineral data.
+The system stores and organizes semi-structured survey and sample data of marine polymetallic minerals, and provides spatial query and map visualization of the records.
 
 <!--more-->

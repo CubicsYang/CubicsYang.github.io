@@ -4,7 +4,7 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 # Website name
-title: Yang Chen's Personal Website
+title: Yang Chen's Homepage
 # Website URL
 baseURL: 'https://CubicsYang.github.io/'
 
@@ -35,7 +35,7 @@ permalinks:
   authors: '/author/:slug/'
 disableAliases: true
 outputs:
-  home: [HTML, RSS, headers, redirects, backlinks]
+  home: [HTML, RSS, backlinks]
   section: [HTML, RSS]
 imaging:
   resampleFilter: lanczos

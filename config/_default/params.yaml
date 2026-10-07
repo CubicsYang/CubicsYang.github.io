@@ -14,7 +14,7 @@ marketing:
     site_type: Person
     local_business_type: ''
     org_name: ''
-    description: ''
+    description: 'Yang Chen (陈阳) is a PhD candidate at Nanjing Normal University working on 3D urban analytics, geomorphometry and urban morphology with street view imagery, DEMs and remote sensing.'
     twitter: ''
   analytics:
     google_analytics: ''
@@ -30,7 +30,7 @@ marketing:
 header:
   navbar:
     enable: true
-    blox: "navbar"
+    block: "navbar"
     fixed_to_top: true
     show_search: true
     show_theme_chooser: true

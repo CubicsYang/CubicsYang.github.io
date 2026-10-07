@@ -1,13 +1,16 @@
 ---
 title: Deep-Time Digital Earth Geomorphology Project
 date: 2022-05-01
-external_link: https://jsgeounion.njnu.edu.cn/main.html
+links:
+  - type: site
+    url: https://nnudta.com
 tags:
   - DDE
   - Geomorphology
   - WebGIS
 ---
 
-A project to build a Deep-Time Digital Earth Geomorphology (DDE) system. The system is designed to provide a platform for the study of geomorphology and the evolution of the Earth's surface. The system is based on the WebGIS technology and is designed to be user-friendly and easy to use.
+The [DDE Geomorphology System](https://nnudta.com), part of the Deep-Time Digital Earth (DDE) programme, is a WebGIS portal that helps geomorphologists download, analyze and visualize geomorphological data.
+It brings together landform analysis tools and datasets such as the Global Basic Landform Units (GBLU).
 
 <!--more-->

@@ -28,6 +28,8 @@ sections:
     content:
       title: Awards
       username: admin
+    design:
+      date_format: '2006'
   - block: resume-languages
     content:
       title: Languages
