@@ -4,68 +4,61 @@ title: ""
 date: 2022-10-24
 type: landing
 
-design:
-  # Default section spacing
-  spacing: "6rem"
-
 sections:
-  - block: resume-biography-3
+  # Custom hero (layouts/_partials/hbx/blocks/bio-hero/block.html).
+  # The biography text itself lives in `content/authors/admin/_index.md`.
+  - block: bio-hero
     content:
-      # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
-      text: ""
-      # Show a call-to-action button under your biography? (optional)
+      eyebrow: About me
+      headline: 'Measuring the third dimension: of cities, and of the land beneath them.'
       button:
         text: Download CV
         url: /uploads/resume.pdf
+      directions:
+        - name: 3D Urban Analytics
+          icon: building-office-2
+          text: Cities grow upward, yet most urban analysis stays flat. I estimate building heights footprint by footprint, read road slopes from street view imagery, and measure accessibility floor by floor in the *vertical* 15-minute city.
+          papers:
+            - label: Footprint-level building heights
+              venue: SCS 2024
+              page: publication/journal-article/2024-SCS
+            - label: 'Vision2Slope: road slopes from street view'
+              venue: IJGIS 2026
+              page: publication/journal-article/2026-IJGIS-Yang
+            - label: The vertical 15-minute city
+              venue: Cities 2025
+              page: publication/journal-article/2025-CITIES
+        - name: Geomorphometry
+          icon: globe-asia-australia
+          text: I read landforms from DEMs, from single basins to the whole globe, and map how people reshape the land surface, from terraces and check dams on the Loess Plateau to global relief classes, dune fields and alluvial fans.
+          papers:
+            - label: Anthropogenic landforms of the Loess Plateau
+              venue: Geomorphology 2025
+              page: publication/journal-article/2025-Geomor-Yang
+            - label: A global relief typology at 1 arcsec
+              venue: ESSD 2025
+              page: publication/journal-article/2025-ESSD
     design:
-      css_class: dark
+      # `hero-terrain` mounts the animated terrain/city background (assets/js/hero-terrain.js)
+      css_class: dark hero-terrain
       background:
-        color: black
-        image:
-          # Add your image background to `assets/media/`.
-          filename: stacked-peaks-dark.svg
-          filters:
-            brightness: 1.0
-          size: cover
-          position: center
-          parallax: false
-  - block: markdown
-    content:
-      title: '📚 My Research'
-      subtitle: ''
-      text: |-
-        I'm a PhD candidate in the Digital Terrain Analytics team at Nanjing Normal University. From November 2024 to November 2025, I was a visiting scholar at the [Urban Analytics Lab](https://ual.sg), National University of Singapore. My research focuses on the intersection of Geography, Computer Science, and Urban Science.
-
-        I apply a range of qualitative and quantitative methods to comprehensively investigate the urban issues and artificial landscape.
-        
-        Please reach out to collaborate 😃
-
-        One hour coding a day, keep the bugs away. 🐞
-    design:
-      columns: '1'
+        color: '#02050e'
+      spacing:
+        padding: ['0', '0', '0', '0']
   - block: collection
     id: papers
     content:
-      title: Featured Publications
+      title: Selected Publications
+      text: "[See all publications →](/publications/)"
       filters:
         folders:
           - publication
         featured_only: true
     design:
-      view: article-grid
-      columns: 1
-  - block: collection
-    content:
-      title: Recent Publications
-      text: "[See all publications →](/publications/)"
-      count: 5
-      filters:
-        folders:
-          - publication
-        exclude_featured: true
-    design:
-      view: citation
+      view: paper-card
+      spacing:
+        padding: ['4rem', '0', '2rem', '0']
   - block: collection
     id: news
     content:
@@ -76,5 +69,7 @@ sections:
         folders:
           - post
     design:
-      view: date-title-summary
+      view: news-list
+      spacing:
+        padding: ['2rem', '0', '4rem', '0']
 ---

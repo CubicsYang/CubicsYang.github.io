@@ -1,0 +1,15 @@
+{{/* Compact news row: date, title and a one-line summary. */}}
+{{ $item := .item }}
+{{ $summary := $item.Params.summary | default $item.Params.description | default $item.Summary | plainify | htmlUnescape }}
+
+<a href="{{ $item.RelPermalink }}" class="group grid grid-cols-1 sm:grid-cols-[7.5rem_1fr] gap-x-6 gap-y-1 py-5">
+  <time class="text-sm text-zinc-500 dark:text-zinc-400 sm:pt-0.5" datetime="{{ $item.Date.Format "2006-01-02" }}">
+    {{ $item.Date | time.Format (site.Params.locale.date_format | default "Jan 2, 2006") }}
+  </time>
+  <div class="min-w-0">
+    <h3 class="text-base font-semibold text-zinc-900 dark:text-zinc-100 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+      {{ $item.Title }}
+    </h3>
+    {{ with $summary }}<p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400 line-clamp-2">{{ . }}</p>{{ end }}
+  </div>
+</a>

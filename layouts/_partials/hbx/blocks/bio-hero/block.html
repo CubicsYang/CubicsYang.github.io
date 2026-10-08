@@ -1,0 +1,118 @@
+{{/* Homepage hero: profile, biography and research directions.
+     A compact replacement for `resume-biography-3` (no education list).
+     The hero always sits on the dark animated background, so colours are fixed light-on-dark. */}}
+
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+
+{{ $author := $block.content.username | default "admin" }}
+{{ $person_page := site.GetPage (printf "/authors/%s" $author) }}
+{{ if not $person_page }}
+  {{ errorf "bio-hero: could not find an author page at `/authors/%s`." $author }}
+{{ end }}
+{{ $person := $person_page.Params }}
+{{ $avatar := ($person_page.Resources.ByType "image").GetMatch "*avatar*" }}
+
+<div class="bio-hero px-4 sm:px-6 lg:px-8 py-14 md:py-16 lg:py-20">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+
+    {{/* Profile */}}
+    <div class="lg:col-span-4 flex flex-col items-center text-center gap-5">
+      {{ with $avatar }}
+      <div class="avatar-wrapper relative w-44 h-44 sm:w-52 sm:h-52 lg:w-60 lg:h-60">
+        {{ $img := .Fill "480x480 Center webp" }}
+        <img class="avatar w-full h-full rounded-full object-cover border-4 border-white/90 shadow-2xl"
+             src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}"
+             alt="{{ $person_page.Title }}">
+        {{ with $person.status.icon }}<span class="avatar-emoji">{{ . | emojify }}</span>{{ end }}
+      </div>
+      {{ end }}
+
+      <div class="space-y-2">
+        <h1 class="text-4xl lg:text-5xl font-black text-white leading-tight">{{ $person_page.Title }}</h1>
+        {{ with $person.role }}
+          <p class="text-xl font-semibold text-primary-400">{{ . | markdownify | emojify }}</p>
+        {{ end }}
+        {{ range $person.organizations }}
+          <p class="text-base text-gray-300">
+            {{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener" class="hover:text-primary-300 transition-colors">{{ end }}
+            {{ .name }}
+            {{ if .url }}</a>{{ end }}
+          </p>
+        {{ end }}
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-3">
+        {{ range $person.profiles }}
+          {{ $link := .url | default .link }}
+          {{ $scheme := (urls.Parse $link).Scheme }}
+          {{ $target := "" }}
+          {{ if not $scheme }}
+            {{ $link = $link | relLangURL }}
+          {{ else if in (slice "http" "https") $scheme }}
+            {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
+          {{ end }}
+          <a href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }} aria-label="{{ .label | default .icon }}"
+             {{ with .label }}title="{{ . }}"{{ end }}
+             class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-900/70 text-gray-300 border border-white/10
+                    shadow-md hover:text-primary-300 hover:border-primary-400/60 hover:-translate-y-0.5 transition-all duration-200 backdrop-blur-sm">
+            {{ partial "functions/get_icon" (dict "name" .icon "attributes" "class=\"w-5 h-5\"") }}
+          </a>
+        {{ end }}
+      </div>
+
+      {{ with $block.content.button }}
+      <a href="{{ .url }}" target="_blank" rel="noopener"
+         class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary-600 hover:bg-primary-500 text-white font-semibold shadow-lg shadow-primary-900/40 transition-colors">
+        {{ partial "functions/get_icon" (dict "name" "document-arrow-down" "attributes" "class=\"w-5 h-5\"") }}
+        {{ .text }}
+      </a>
+      {{ end }}
+    </div>
+
+    {{/* Biography and research directions */}}
+    <div class="lg:col-span-8">
+      {{ with $block.content.eyebrow }}
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary-400 mb-3">{{ . }}</p>
+      {{ end }}
+      {{ with $block.content.headline }}
+        <h2 class="text-2xl sm:text-3xl font-bold text-white leading-snug mb-5">{{ . | markdownify | emojify }}</h2>
+      {{ end }}
+
+      <div class="bio-text prose prose-invert max-w-none text-gray-200 text-base sm:text-[1.0625rem] leading-relaxed prose-p:my-3 prose-a:text-primary-300 hover:prose-a:text-primary-200">
+        {{ $person_page.Content | emojify }}
+      </div>
+
+      {{ with $block.content.directions }}
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-7">
+        {{ range . }}
+        <div class="rounded-2xl p-5 bg-gray-950/65 border border-white/10 backdrop-blur-md shadow-xl">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-primary-500/15 text-primary-300 flex items-center justify-center">
+              {{ partial "functions/get_icon" (dict "name" (.icon | default "sparkles") "attributes" "class=\"w-5 h-5\"") }}
+            </span>
+            <h3 class="text-lg font-bold text-white">{{ .name }}</h3>
+          </div>
+          <p class="text-sm text-gray-300 leading-relaxed">{{ .text | markdownify | emojify }}</p>
+          {{ with .papers }}
+          <ul class="mt-4 space-y-1.5 text-sm">
+            {{ range . }}
+              {{ $paper := site.GetPage .page }}
+              {{ if not $paper }}{{ errorf "bio-hero: paper page `%s` not found." .page }}{{ end }}
+              <li>
+                <a href="{{ $paper.RelPermalink }}" title="{{ $paper.Title | plainify }}" class="group flex gap-2 text-gray-200 hover:text-primary-300 transition-colors">
+                  <span class="text-primary-400 group-hover:translate-x-0.5 transition-transform">→</span>
+                  <span>{{ .label }}{{ with .venue }} <span class="text-xs text-gray-400 whitespace-nowrap">· {{ . }}</span>{{ end }}</span>
+                </a>
+              </li>
+            {{ end }}
+          </ul>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+
+  </div>
+</div>

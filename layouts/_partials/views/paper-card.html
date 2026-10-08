@@ -1,0 +1,36 @@
+{{/* Compact publication card: thumbnail, venue/year, title and a short author line. */}}
+{{ $item := .item }}
+{{ $image := partial "functions/get_featured_image.html" $item }}
+{{ $venue := index (split ($item.Params.publication_short | default $item.Params.publication | default "" | markdownify | plainify | htmlUnescape) ",") 0 }}
+{{ $venue = strings.TrimPrefix "In " $venue }}
+{{ $authors := $item.GetTerms "authors" }}
+
+<a href="{{ $item.RelPermalink }}"
+   class="group flex gap-4 p-4 rounded-2xl bg-white dark:bg-zinc-900 ring-1 ring-zinc-900/5 dark:ring-white/10 shadow-sm
+          hover:shadow-lg hover:ring-primary-500/40 hover:-translate-y-0.5 transition-all duration-200">
+  <div class="relative flex-shrink-0 w-28 h-28 sm:w-36 sm:h-28 rounded-xl overflow-hidden bg-zinc-100 dark:bg-zinc-800">
+    {{ with $image }}
+      {{ $thumb := .Fill "320x240 Center webp" }}
+      <img src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" loading="lazy" decoding="async"
+           class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+           alt="{{ $item.Title | plainify }}">
+    {{ end }}
+  </div>
+  <div class="min-w-0 flex flex-col">
+    <p class="text-xs font-semibold text-primary-600 dark:text-primary-400 truncate" title="{{ $venue }}">
+      {{ $item.Date.Format "2006" }}{{ with $venue }} · {{ . }}{{ end }}
+    </p>
+    <h3 class="mt-1 text-base font-semibold leading-snug text-zinc-900 dark:text-zinc-100 line-clamp-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+      {{ $item.Title }}
+    </h3>
+    {{ with $authors }}
+    <p class="mt-auto pt-2 text-xs text-zinc-500 dark:text-zinc-400 truncate">
+      {{- range $i, $a := first 4 . -}}
+        {{- if $i }}, {{ end -}}
+        <span {{ if $a.Page.Params.highlight_name }}class="font-semibold text-zinc-700 dark:text-zinc-200"{{ end }}>{{ $a.LinkTitle }}</span>
+      {{- end -}}
+      {{- if gt (len .) 4 }}, et al.{{ end -}}
+    </p>
+    {{ end }}
+  </div>
+</a>

@@ -1,0 +1,31 @@
+{{/* Animated terrain/city background for the homepage hero (see assets/js/hero-terrain.js). */}}
+{{ if .IsHome }}
+<style>
+  .hero-terrain .home-section-bg {
+    overflow: hidden;
+    background: linear-gradient(180deg, #02050e 0%, #0c2630 45%, #091c25 100%);
+  }
+  .hero-terrain__canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  /* Keeps the biography readable over the scene. */
+  .hero-terrain__veil {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(180deg, rgba(2, 5, 14, 0.45) 0%, rgba(2, 5, 14, 0) 22%, rgba(2, 5, 14, 0) 58%, rgba(2, 5, 14, 0.55) 100%),
+      linear-gradient(90deg, rgba(2, 5, 14, 0.35) 0%, rgba(2, 5, 14, 0) 30%, rgba(2, 5, 14, 0) 70%, rgba(2, 5, 14, 0.25) 100%);
+  }
+  .hero-terrain .bio-hero h1,
+  .hero-terrain .bio-hero h2,
+  .hero-terrain .bio-hero h3,
+  .hero-terrain .bio-hero .bio-text {
+    text-shadow: 0 1px 2px rgba(2, 5, 14, 0.9), 0 0 14px rgba(2, 5, 14, 0.75);
+  }
+</style>
+{{ end }}

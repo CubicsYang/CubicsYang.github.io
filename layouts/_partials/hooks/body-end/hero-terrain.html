@@ -1,0 +1,6 @@
+{{/* Animated terrain/city background for the homepage hero. */}}
+{{ if .IsHome }}
+  {{ $opts := dict "minify" hugo.IsProduction "target" "es2018" }}
+  {{ $js := resources.Get "js/hero-terrain.js" | js.Build $opts | fingerprint }}
+  <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+{{ end }}

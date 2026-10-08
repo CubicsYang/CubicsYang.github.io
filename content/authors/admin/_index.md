@@ -61,7 +61,7 @@ education:
     date_start: 2021-09-01
     date_end: 2027-06-30
     summary: |
-      Supervised by Prof. Guoan Tang.
+      Supervised by [Prof. Guoan Tang](https://en.njnu.edu.cn/people/guoan-tang).
   - area: BSc Geographic Information Science
     institution: Zhejiang Agriculture & Forest University, China
     date_start: 2017-09-01
@@ -158,8 +158,8 @@ awards:
     awarder: Nanjing Normal University
 ---
 
-## About Me
+I'm a PhD candidate in Cartography and GIS at Nanjing Normal University, working in [Prof. Guoan Tang](https://en.njnu.edu.cn/people/guoan-tang)'s Digital Terrain Analytics team. I was trained to read terrain, and I still look at cities the same way: as surfaces with relief, structure and a history of how they were shaped. My research follows that third dimension at two scales: the built skyline of cities and the natural relief of the Earth's surface.
 
-Yang CHEN (陈阳) is a PhD candidate at Nanjing Normal University, China, with expertise in GIS, Remote Sensing, and Cartography, as well as an interdisciplinary background in geomorphology and terrain modeling.
-His research focuses on urban modeling and urban morphology by leveraging multi-source geospatial data, such as street view imagery, digital elevation models, and remote sensing imagery.
-Recently, Yang’s work has concentrated on estimating building heights at the footprint level using machine learning methods and reconstructing the 3D typology of road networks on a large scale. He is also involved in projects that integrate urban analytics with environmental sustainability. He aims to contribute to sustainable urban development through innovative data-driven solutions.
+From November 2024 to November 2025, I was a visiting scholar at the [Urban Analytics Lab](https://ual.sg), National University of Singapore, working with [Prof. Filip Biljecki](https://filipbiljecki.com/).
+
+Off the map, you'll find me on a basketball court or behind a camera. One hour of coding a day keeps the bugs away 🐞, and I'm always happy to talk about collaborations.
