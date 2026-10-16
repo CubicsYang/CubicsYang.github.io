@@ -1,0 +1,15 @@
+{{/* The /publications/ page (linked from the menu): same searchable list as the publication section. */}}
+{{ define "main" }}
+
+<div class="max-w-prose mx-auto flex justify-center">
+  <article class="prose prose-slate lg:prose-xl dark:prose-invert">
+    <h1 class="lg:text-6xl">{{ .Title }}</h1>
+    {{ .Content }}
+  </article>
+</div>
+
+{{ with site.GetPage "/publication" }}
+  {{ partial "publication-filter" (dict "pages" .Pages) }}
+{{ end }}
+
+{{ end }}
