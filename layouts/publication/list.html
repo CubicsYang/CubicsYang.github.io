@@ -1,0 +1,255 @@
+{{/* Publications list with client-side search and filters (overrides the theme's paginated list). */}}
+{{ define "main" }}
+
+<div class="max-w-prose mx-auto flex justify-center">
+  <article class="prose prose-slate lg:prose-xl dark:prose-invert">
+    <h1 class="lg:text-6xl">{{ .Title }}</h1>
+    {{ .Content }}
+  </article>
+</div>
+
+{{ $pages := .Pages.ByDate.Reverse }}
+{{ $years := slice }}
+{{ range $pages }}{{ $years = $years | append (.Date.Format "2006") }}{{ end }}
+{{ $years = $years | uniq }}
+
+<div class="flex flex-col items-center">
+  <div class="mt-12 sm:mt-16 container max-w-3xl w-full" id="pubf">
+
+    <div class="pubf-toolbar">
+      <div class="pubf-search">
+        <svg class="pubf-search__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <circle cx="8.5" cy="8.5" r="5.5"/><path d="m13 13 4 4" stroke-linecap="round"/>
+        </svg>
+        <input id="pubf-q" type="search" autocomplete="off" spellcheck="false"
+               placeholder="Search title, author, keyword…"
+               aria-label="Search publications">
+        <kbd class="pubf-search__kbd" aria-hidden="true">/</kbd>
+      </div>
+
+      <div class="pubf-filters">
+        <div class="pubf-group" role="group" aria-label="Year">
+          <span class="pubf-group__label">Year</span>
+          <button type="button" class="pubf-chip" data-filter="year" data-value="" aria-pressed="true">All</button>
+          {{ range $years }}
+          <button type="button" class="pubf-chip" data-filter="year" data-value="{{ . }}" aria-pressed="false">{{ . }}</button>
+          {{ end }}
+        </div>
+        <div class="pubf-group" role="group" aria-label="Type">
+          <span class="pubf-group__label">Type</span>
+          <button type="button" class="pubf-chip" data-filter="type" data-value="" aria-pressed="true">All</button>
+          <button type="button" class="pubf-chip" data-filter="type" data-value="journal" aria-pressed="false">Journal</button>
+          <button type="button" class="pubf-chip" data-filter="type" data-value="conference" aria-pressed="false">Conference</button>
+        </div>
+        <div class="pubf-group" role="group" aria-label="Authorship">
+          <span class="pubf-group__label">Role</span>
+          <button type="button" class="pubf-chip" data-filter="role" data-value="" aria-pressed="true">All</button>
+          <button type="button" class="pubf-chip" data-filter="role" data-value="first" aria-pressed="false">First author</button>
+        </div>
+      </div>
+
+      <div class="pubf-status">
+        <span id="pubf-count" aria-live="polite">{{ len $pages }} publications</span>
+        <button type="button" id="pubf-reset" class="pubf-reset" hidden>Clear filters</button>
+      </div>
+    </div>
+
+    {{ range $pages.GroupByDate "2006" }}
+    <section class="pubf-year" data-year="{{ .Key }}">
+      <h2 class="pubf-year__title">{{ .Key }}</h2>
+      <div class="flex flex-col space-y-3">
+        {{ range .Pages }}
+          {{ $type := "journal" }}
+          {{ if in (.Params.publication_types | default slice) "paper-conference" }}{{ $type = "conference" }}{{ end }}
+          {{ $first := eq (index (.Params.authors | default (slice "")) 0) "admin" }}
+          {{ $authors := slice }}
+          {{ range .GetTerms "authors" }}{{ $authors = $authors | append .LinkTitle }}{{ end }}
+          {{ $haystack := delimit (slice
+              .Title
+              (delimit $authors " ")
+              (.Params.publication | default "" | markdownify | plainify)
+              (delimit (.Params.tags | default slice) " ")
+              (.Params.abstract | default "")
+            ) " " | htmlUnescape | lower }}
+          <div class="pubf-item" data-year="{{ .Date.Format "2006" }}" data-type="{{ $type }}"
+               data-role="{{ if $first }}first{{ else }}co{{ end }}" data-search="{{ $haystack }}">
+            {{ partial "views/citation" (dict "item" .) }}
+          </div>
+        {{ end }}
+      </div>
+    </section>
+    {{ end }}
+
+    <p id="pubf-empty" class="pubf-empty" hidden>
+      No publications match these filters.
+      <button type="button" class="pubf-reset" data-reset>Clear filters</button>
+    </p>
+  </div>
+</div>
+
+<style>
+  #pubf { padding-inline: 1rem; }
+  @media (min-width: 640px) { #pubf { padding-inline: 0; } }
+  .pubf-toolbar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+    padding-bottom: 1.25rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid rgb(228 228 231);
+  }
+  .dark .pubf-toolbar { border-color: rgb(63 63 70); }
+
+  .pubf-search { position: relative; }
+  .pubf-search input {
+    width: 100%;
+    padding: 0.625rem 2.5rem 0.625rem 2.5rem;
+    font-size: 0.95rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgb(212 212 216);
+    background: #fff;
+    color: rgb(24 24 27);
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .pubf-search input::placeholder { color: rgb(161 161 170); }
+  .pubf-search input:focus {
+    border-color: var(--color-primary-600);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary-600) 20%, transparent);
+  }
+  .dark .pubf-search input { background: rgb(24 24 27); border-color: rgb(63 63 70); color: rgb(244 244 245); }
+  .pubf-search__icon {
+    position: absolute; left: 0.8rem; top: 50%; width: 1.1rem; height: 1.1rem;
+    transform: translateY(-50%); color: rgb(161 161 170); pointer-events: none;
+  }
+  .pubf-search__kbd {
+    position: absolute; right: 0.75rem; top: 50%; transform: translateY(-50%);
+    font-size: 0.75rem; line-height: 1; padding: 0.2rem 0.4rem; border-radius: 0.35rem;
+    border: 1px solid rgb(212 212 216); color: rgb(113 113 122); pointer-events: none;
+  }
+  .dark .pubf-search__kbd { border-color: rgb(63 63 70); color: rgb(161 161 170); }
+  .pubf-search input:focus ~ .pubf-search__kbd,
+  .pubf-search input:not(:placeholder-shown) ~ .pubf-search__kbd { display: none; }
+
+  .pubf-filters { display: flex; flex-wrap: wrap; gap: 0.625rem 1.5rem; }
+  .pubf-group { display: flex; flex-wrap: wrap; align-items: center; gap: 0.375rem; }
+  .pubf-group__label {
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+    color: rgb(113 113 122); margin-right: 0.125rem;
+  }
+  .dark .pubf-group__label { color: rgb(161 161 170); }
+  .pubf-chip {
+    font-size: 0.8rem; line-height: 1; padding: 0.4rem 0.7rem; border-radius: 999px;
+    border: 1px solid rgb(212 212 216); color: rgb(63 63 70); background: transparent;
+    cursor: pointer; transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+  }
+  .pubf-chip:not([aria-pressed="true"]):hover { border-color: var(--color-primary-600); color: var(--color-primary-600); }
+  .pubf-chip:focus-visible { outline: 2px solid var(--color-primary-600); outline-offset: 2px; }
+  .pubf-chip[aria-pressed="true"] {
+    background: var(--color-primary-600); border-color: var(--color-primary-600); color: #fff;
+  }
+  .dark .pubf-chip { border-color: rgb(63 63 70); color: rgb(212 212 216); }
+  .dark .pubf-chip:not([aria-pressed="true"]):hover { border-color: var(--color-primary-400); color: var(--color-primary-400); }
+  .dark .pubf-chip[aria-pressed="true"] {
+    background: var(--color-primary-400); border-color: var(--color-primary-400); color: rgb(9 9 11);
+  }
+
+  .pubf-status {
+    display: flex; align-items: center; gap: 0.75rem;
+    font-size: 0.85rem; color: rgb(113 113 122);
+  }
+  .dark .pubf-status { color: rgb(161 161 170); }
+  .pubf-reset {
+    font-size: 0.85rem; color: var(--color-primary-600); background: none; border: 0; padding: 0;
+    cursor: pointer; text-decoration: underline; text-underline-offset: 2px;
+  }
+  .dark .pubf-reset { color: var(--color-primary-400); }
+
+  .pubf-year { margin-top: 1.75rem; }
+  .pubf-year__title {
+    font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem;
+    color: rgb(24 24 27);
+  }
+  .dark .pubf-year__title { color: rgb(244 244 245); }
+  .pubf-empty { margin-top: 2rem; color: rgb(113 113 122); }
+  .pubf-year[hidden], .pubf-item[hidden] { display: none; }
+</style>
+
+<script>
+(() => {
+  const root = document.getElementById('pubf');
+  if (!root) return;
+  const input = root.querySelector('#pubf-q');
+  const chips = [...root.querySelectorAll('.pubf-chip')];
+  const items = [...root.querySelectorAll('.pubf-item')];
+  const sections = [...root.querySelectorAll('.pubf-year')];
+  const count = root.querySelector('#pubf-count');
+  const empty = root.querySelector('#pubf-empty');
+  const resets = [...root.querySelectorAll('.pubf-reset')];
+  const total = items.length;
+  const state = { q: '', year: '', type: '', role: '' };
+
+  const setChips = () => chips.forEach(c =>
+    c.setAttribute('aria-pressed', String(state[c.dataset.filter] === c.dataset.value)));
+
+  const syncUrl = () => {
+    const params = new URLSearchParams();
+    for (const [k, v] of Object.entries(state)) if (v) params.set(k, v);
+    const qs = params.toString();
+    history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '') + location.hash);
+  };
+
+  const apply = () => {
+    const terms = state.q.toLowerCase().split(/\s+/).filter(Boolean);
+    let shown = 0;
+    for (const el of items) {
+      const d = el.dataset;
+      const ok = (!state.year || d.year === state.year)
+        && (!state.type || d.type === state.type)
+        && (!state.role || d.role === state.role)
+        && terms.every(t => d.search.includes(t));
+      el.hidden = !ok;
+      if (ok) shown++;
+    }
+    for (const s of sections) s.hidden = !s.querySelector('.pubf-item:not([hidden])');
+    const filtered = state.q || state.year || state.type || state.role;
+    count.textContent = filtered
+      ? `${shown} of ${total} publications`
+      : `${total} publications`;
+    empty.hidden = shown > 0;
+    resets.forEach(r => { if (!r.hasAttribute('data-reset')) r.hidden = !filtered; });
+    setChips();
+    syncUrl();
+  };
+
+  const params = new URLSearchParams(location.search);
+  for (const k of Object.keys(state)) state[k] = params.get(k) || '';
+  input.value = state.q;
+
+  input.addEventListener('input', () => { state.q = input.value.trim(); apply(); });
+  chips.forEach(c => c.addEventListener('click', () => {
+    state[c.dataset.filter] = c.dataset.value;
+    apply();
+  }));
+  resets.forEach(r => r.addEventListener('click', () => {
+    Object.keys(state).forEach(k => state[k] = '');
+    input.value = '';
+    apply();
+  }));
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && !/^(input|textarea|select)$/i.test(document.activeElement.tagName)
+        && !document.activeElement.isContentEditable) {
+      e.preventDefault();
+      input.focus();
+    } else if (e.key === 'Escape' && document.activeElement === input && input.value) {
+      input.value = '';
+      state.q = '';
+      apply();
+    }
+  });
+
+  apply();
+})();
+</script>
+
+{{ end }}
