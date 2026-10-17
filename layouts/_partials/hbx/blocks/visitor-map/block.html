@@ -18,10 +18,11 @@
   </div>
   {{ end }}
 
-  <div class="w-full max-w-3xl mx-auto mt-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm p-4 sm:p-6">
+  {{/* No card: the widget sits directly on the section background. */}}
+  <div class="w-full max-w-3xl mx-auto mt-2">
     {{ if $embed }}
       {{/* Widgets size themselves to this container's width, so cap it. */}}
-      <div class="visitor-map__widget mx-auto w-full max-w-sm overflow-hidden">
+      <div class="visitor-map__widget mx-auto w-full max-w-[16rem] overflow-hidden">
         {{ $embed | safeHTML }}
       </div>
     {{ else }}
