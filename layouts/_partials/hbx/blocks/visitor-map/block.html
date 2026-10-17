@@ -1,0 +1,39 @@
+{{/* Homepage visitor map: embeds a third-party visitor-map widget (ClustrMaps, MapMyVisitors, ...).
+     Paste the widget's <script> embed code into `content.embed` on the homepage.
+     The provider does the counting and geolocation; this block only frames the widget.
+     With no embed code, the section is hidden in production and a setup hint is shown under `hugo server`. */}}
+
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $embed := $block.content.embed | default "" | strings.TrimSpace }}
+
+{{ if or $embed (not hugo.IsProduction) }}
+<div class="visitor-map px-6">
+  {{ with $block.content.title }}
+  <div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center">
+    <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+      {{ . | emojify | $page.RenderString }}
+    </div>
+    {{ with $block.content.text }}<p class="text-center text-gray-600 dark:text-gray-400">{{ . | emojify | $page.RenderString }}</p>{{ end }}
+  </div>
+  {{ end }}
+
+  <div class="w-full max-w-3xl mx-auto mt-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 shadow-sm p-4 sm:p-6">
+    {{ if $embed }}
+      {{/* Widgets size themselves to this container's width, so cap it. */}}
+      <div class="visitor-map__widget mx-auto w-full max-w-sm overflow-hidden">
+        {{ $embed | safeHTML }}
+      </div>
+    {{ else }}
+      <p class="text-center text-sm text-gray-500 dark:text-gray-400 py-10">
+        Visitor map not configured: paste your ClustrMaps / MapMyVisitors embed code into
+        <code>content.embed</code> of the <code>visitor-map</code> block in <code>content/_index.md</code>.
+        (This hint only shows under <code>hugo server</code>.)
+      </p>
+    {{ end }}
+  </div>
+</div>
+{{ else }}
+  {{/* Collapse the theme's padded <section> wrapper too. */}}
+  <style>.blox-visitor-map { display: none; }</style>
+{{ end }}

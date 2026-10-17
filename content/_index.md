@@ -71,5 +71,17 @@ sections:
     design:
       view: news-list
       spacing:
+        padding: ['2rem', '0', '2rem', '0']
+  # Visitor map (layouts/_partials/hbx/blocks/visitor-map/block.html).
+  # Sign up at https://clustrmaps.com (or https://mapmyvisitors.com), add this site's URL,
+  # pick the map widget, and paste the generated <script ...></script> code into `embed`.
+  - block: visitor-map
+    id: visitors
+    content:
+      title: Visitors
+      text: Where readers of this site come from.
+      embed: '<script type="text/javascript" id="mmvst_globe" src="https://mapmyvisitors.com/globe.js?d=GnTVbmxSlaAu6IjzYYiLmUY6hMT4xBWseb46j9m2lYw"></script>'
+    design:
+      spacing:
         padding: ['2rem', '0', '4rem', '0']
 ---
