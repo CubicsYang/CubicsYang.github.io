@@ -79,8 +79,8 @@ sections:
     id: visitors
     content:
       title: Visitors
-      text: Where readers of this site come from (From Oct, 2026).
-      embed: '<script type="text/javascript" id="mmvst_globe" src="https://mapmyvisitors.com/globe.js?d=GnTVbmxSlaAu6IjzYYiLmUY6hMT4xBWseb46j9m2lYw"></script>'
+      text: Where readers of this site come from (From Nov, 2026).
+      embed: '<script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=GnTVbmxSlaAu6IjzYYiLmUY6hMT4xBWseb46j9m2lYw"></script>'
     design:
       spacing:
         padding: ['2rem', '0', '4rem', '0']
