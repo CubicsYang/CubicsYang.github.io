@@ -18,6 +18,14 @@ sections:
       date_format: 'January 2006'
       # Education or Experience section first?
       is_education_first: false
+  # Custom block (layouts/_partials/hbx/blocks/resume-presentations/block.html);
+  # the list itself lives under `presentations:` in content/authors/admin/_index.md.
+  - block: resume-presentations
+    content:
+      title: Presentations
+      username: admin
+    design:
+      date_format: 'Jan 2006'
   - block: resume-skills
     content:
       title: Skills & Hobbies

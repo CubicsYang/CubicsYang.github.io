@@ -1,0 +1,43 @@
+{{/* Experience page: a compact, reverse-chronological list of conference presentations.
+     Data lives in `presentations:` of the author profile (content/authors/<username>/_index.md). */}}
+
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $author := $block.content.username | default "admin" }}
+{{ $person_page := site.GetPage (printf "/authors/%s" $author) }}
+{{ $items := slice }}
+{{ with $person_page }}{{ $items = .Params.presentations | default slice }}{{ end }}
+{{ $date_format := $block.design.date_format | default "Jan 2006" }}
+
+<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-2">
+  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+    {{ $block.content.title | default "Presentations" | markdownify | emojify }}
+  </div>
+  {{ with $block.content.text }}<p class="text-center text-gray-600 dark:text-gray-400">{{ . | markdownify | emojify }}</p>{{ end }}
+
+  <ol class="w-full list-none p-0 m-0 divide-y divide-gray-200 dark:divide-gray-700 border-y border-gray-200 dark:border-gray-700">
+    {{ range sort $items "date" "desc" }}
+    <li class="py-4 m-0 flex flex-col sm:flex-row gap-1 sm:gap-6">
+      <div class="sm:w-24 shrink-0 text-sm text-gray-500 dark:text-gray-400 sm:pt-0.5 tabular-nums">
+        {{ (time .date) | time.Format $date_format }}
+      </div>
+      <div class="min-w-0">
+        <div class="font-semibold text-gray-900 dark:text-white leading-snug">
+          {{ .event | markdownify | emojify }}
+          {{ with .type }}<span class="ml-1 align-middle inline-block rounded-full px-2 py-0.5 text-xs font-medium bg-primary-100 text-primary-800 dark:bg-primary-900/60 dark:text-primary-200">{{ . }}</span>{{ end }}
+        </div>
+        {{ if or .title .location }}
+        <div class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+          {{ with .title }}<span class="italic">{{ . | markdownify }}</span>{{ end }}
+          {{ if and .title .location }} &#8729; {{ end }}
+          {{ with .location }}{{ . }}{{ end }}
+        </div>
+        {{ end }}
+        {{ with .url }}
+        <a class="mt-1 inline-block text-sm text-primary-700 dark:text-primary-300 hover:underline" href="{{ . | relURL }}">More →</a>
+        {{ end }}
+      </div>
+    </li>
+    {{ end }}
+  </ol>
+</div>

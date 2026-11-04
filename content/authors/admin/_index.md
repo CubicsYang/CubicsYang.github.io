@@ -156,6 +156,34 @@ awards:
     date: '2025-01-01'
     date_start: '2025-01-01'
     awarder: Nanjing Normal University
+
+# Presentations (shown by the `resume-presentations` block on /experience/).
+#   Required: `event` and `date` (YYYY-MM-DD; only month and year are shown).
+#   Optional: `location`, `type` (small tag, e.g. "Oral", "Poster", "3MT talk"),
+#   `title` (talk title), `url` (link to slides, abstract or a news post).
+presentations:
+  - event: 4th International Conference on Urban Science and Intelligence
+    location: Guangzhou, China
+    date: '2026-08-01'
+  - event: 2nd Academic Forum of Jiangsu Graduate Students
+    location: Nanjing, China
+    date: '2025-12-23'
+    type: 3MT talk
+    title: The vertical 15-minute city
+    url: /post/2025-3mt/
+  - event: AGU Fall Meeting
+    location: San Francisco, USA
+    date: '2023-12-01'
+    type: First-author abstract
+  - event: 1st Conference on Information Geography
+    location: Suzhou, China
+    date: '2023-11-01'
+  - event: 18th National Annual Conference on Geographic Information Science
+    location: Guilin, China
+    date: '2023-05-01'
+  - event: City+ Conference
+    location: Perth, Australia
+    date: '2022-09-01'
 ---
 
 I'm a PhD candidate in Cartography and GIS at Nanjing Normal University, working in [Prof. Guoan Tang](https://en.njnu.edu.cn/people/guoan-tang)'s Digital Terrain Analytics team. I was trained to read terrain, and I still look at cities the same way: as surfaces with relief, structure and a history of how they were shaped. My research follows that third dimension at two scales: the built skyline of cities and the natural relief of the Earth's surface.
