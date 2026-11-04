@@ -1,0 +1,42 @@
+# Journal covers for the publication list (layouts/_partials/publication-filter.html).
+# `name` must match the venue written between *...* in a publication's `publication:` field
+# (case-insensitive). `cover` is a file in assets/media/journals/; leave it out and the
+# list shows a tile with `abbr` instead. A publication can also set `journal_cover:` itself.
+- name: Building and Environment
+  abbr: B&E
+  cover: building-and-environment.jpg
+- name: CATENA
+  abbr: CATENA
+  cover: catena.jpg
+- name: Cities
+  abbr: Cities
+  cover: cities.jpg
+- name: Earth Surface Processes and Landforms
+  abbr: ESPL
+  cover: earth-surface-processes-and-landforms.jpg
+- name: Earth System Science Data
+  abbr: ESSD
+  cover: earth-system-science-data.jpg
+- name: Geo-spatial Information Science
+  abbr: GSIS
+  cover: geo-spatial-information-science.jpg
+- name: Geomorphology
+  abbr: Geomorph.
+  cover: geomorphology.jpg
+- name: International Journal of Geographical Information Science
+  abbr: IJGIS
+  cover: international-journal-of-geographical-information-science.jpg
+- name: Journal of Environmental Management
+  abbr: JEMA
+  cover: journal-of-environmental-management.jpg
+- name: Remote Sensing
+  abbr: RS
+  cover: remote-sensing.jpg
+- name: Sustainable Cities and Society
+  abbr: SCS
+  cover: sustainable-cities-and-society.jpg
+- name: Transactions in GIS
+  abbr: TGIS
+  cover: transactions-in-gis.jpg
+- name: 2023 AGU Fall Meeting
+  abbr: AGU
