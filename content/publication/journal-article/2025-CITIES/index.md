@@ -51,8 +51,17 @@ featured: true
 hugoblox:
   ids:
     doi: 10.1016/j.cities.2025.106516
+links:
+- type: video
+  url: /publication/journal-article/2025-cities/vertical-15min-city-overview.mp4
 image:
   caption: 3D urban function and analysis in high-density mixed-use areas
   focal_point: ''
   preview_only: false
 ---
+
+## Video overview
+
+A 60-second introduction to the vertical 15-minute city (English voiceover).
+
+{{< video src="vertical-15min-city-overview.mp4" poster="featured.png" controls="yes" >}}

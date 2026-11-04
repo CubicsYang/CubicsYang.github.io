@@ -68,9 +68,14 @@ sections:
       items:
         - page: project/vision2slope
           file: vision2slope-overview.mp4
-          title: 'Vision2Slope in 60 seconds'
+          title: 'Vision2Slope'
           text: Estimating urban road slopes from street view imagery (IJGIS 2026).
           link: Project page →
+        - page: publication/journal-article/2025-CITIES
+          file: vertical-15min-city-overview.mp4
+          title: 'The vertical 15-minute city'
+          text: Floor-level 15-minute accessibility in high-density cities (Cities 2025).
+          link: Paper page →
     design:
       spacing:
         padding: ['2rem', '0', '2rem', '0']
