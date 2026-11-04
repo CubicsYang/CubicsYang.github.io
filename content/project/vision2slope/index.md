@@ -17,3 +17,9 @@ It projects panoramas into road-aligned views, corrects camera-induced distortio
 The method is described in our paper in the [*International Journal of Geographical Information Science*](https://doi.org/10.1080/13658816.2026.2656269), and the code is available on [GitHub](https://github.com/CubicsYang/Vision2Slope).
 
 <!--more-->
+
+## Video overview
+
+A 60-second introduction to Vision2Slope (English voiceover).
+
+{{< video src="vision2slope-overview.mp4" poster="featured.jpg" controls="yes" >}}

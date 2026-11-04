@@ -53,6 +53,8 @@ links:
   url: https://ual.sg/publication/2026-ijgis-vision-2-slope/2026-ijgis-vision-2-slope.pdf
 - type: code
   url: https://github.com/CubicsYang/Vision2Slope
+- type: video
+  url: /project/vision2slope/vision2slope-overview.mp4
 - type: poster
   url: /publication/journal-article/2026-ijgis-yang/vision2slope-poster-yang.jpg
 image:

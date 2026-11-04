@@ -1,0 +1,53 @@
+{{/* Homepage video block: shows one or more videos stored in page bundles.
+     Each item in `content.items` takes:
+       page    : the bundle that holds the file, e.g. `project/vision2slope`
+       file    : the video file name inside that bundle
+       poster  : optional cover image in the same bundle (default: the bundle's featured image)
+       title   : optional caption title (defaults to the page's title)
+       text    : optional one-line description
+       link    : optional label for a link to the page (e.g. "Project page →")
+     One video is shown centered; two or more are laid out in a grid. */}}
+
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $items := $block.content.items | default slice }}
+
+<div class="videos-block px-6">
+  {{ with $block.content.title }}
+  <div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center">
+    <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+      {{ . | emojify | $page.RenderString }}
+    </div>
+    {{ with $block.content.text }}<p class="text-center text-gray-600 dark:text-gray-400">{{ . | emojify | $page.RenderString }}</p>{{ end }}
+  </div>
+  {{ end }}
+
+  <div class="mx-auto mt-6 grid gap-8 {{ if gt (len $items) 1 }}max-w-5xl md:grid-cols-2{{ else }}max-w-3xl{{ end }}">
+    {{ range $items }}
+      {{ $target := site.GetPage .page }}
+      {{ $video := "" }}
+      {{ $poster := "" }}
+      {{ if $target }}
+        {{ $video = $target.Resources.GetMatch .file }}
+        {{ $poster = $target.Resources.GetMatch (.poster | default "featured.*") }}
+      {{ end }}
+      {{ if $video }}
+      <figure class="m-0">
+        <div class="overflow-hidden rounded-xl shadow-lg ring-1 ring-black/5 dark:ring-white/10 bg-black">
+          <video class="block w-full aspect-video" controls preload="metadata" playsinline
+                 {{ with $poster }}poster="{{ .RelPermalink }}"{{ end }}>
+            <source src="{{ $video.RelPermalink }}" type="{{ $video.MediaType.Type }}">
+          </video>
+        </div>
+        <figcaption class="mt-3 text-center">
+          <div class="font-semibold text-gray-900 dark:text-white">{{ .title | default $target.Title | $page.RenderString }}</div>
+          {{ with .text }}<div class="text-sm text-gray-600 dark:text-gray-400 mt-1">{{ . | $page.RenderString }}</div>{{ end }}
+          {{ with .link }}<a class="text-sm text-primary-700 dark:text-primary-300 hover:underline mt-1 inline-block" href="{{ $target.RelPermalink }}">{{ . }}</a>{{ end }}
+        </figcaption>
+      </figure>
+      {{ else if not hugo.IsProduction }}
+      <p class="text-center text-sm text-red-600">Video not found: <code>{{ .file }}</code> in <code>{{ .page }}</code>.</p>
+      {{ end }}
+    {{ end }}
+  </div>
+</div>

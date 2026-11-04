@@ -59,6 +59,21 @@ sections:
       view: paper-card
       spacing:
         padding: ['4rem', '0', '2rem', '0']
+  # Videos (layouts/_partials/hbx/blocks/videos/block.html).
+  # Each item points to a video file inside a page bundle; add more items for a grid.
+  - block: videos
+    id: videos
+    content:
+      title: Videos
+      items:
+        - page: project/vision2slope
+          file: vision2slope-overview.mp4
+          title: 'Vision2Slope in 60 seconds'
+          text: Estimating urban road slopes from street view imagery (IJGIS 2026).
+          link: Project page →
+    design:
+      spacing:
+        padding: ['2rem', '0', '2rem', '0']
   - block: collection
     id: news
     content:
