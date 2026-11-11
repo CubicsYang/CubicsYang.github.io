@@ -1,0 +1,13 @@
+{{/* Loads the Dimensions and Altmetric badge scripts once per page (see citation-badges.html). */}}
+<style>
+  .cite-badges { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-top: 0.4rem; line-height: 0; }
+  .cite-badges:empty { display: none; }
+  .cite-badges--large { gap: 1rem; margin-top: 1rem; }
+  .cite-badges .altmetric-embed, .cite-badges .__dimensions_badge_embed__ { display: inline-block; }
+  .cite-badges img { margin: 0; }
+  /* Altmetric badges have a transparent centre with dark text: back them with white in dark mode. */
+  .dark .cite-badges .altmetric-embed img { background: #fff; border-radius: 3px; }
+  .dark .cite-badges--large .altmetric-embed img { border-radius: 9999px; }
+</style>
+<script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+<script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>

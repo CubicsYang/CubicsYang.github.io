@@ -12,7 +12,7 @@ date: '2026-04-01'
 publishDate: '2026-04-01T00:00:00Z'
 publication_types:
 - article-journal
-publication: '*International Journal of Geographical Information Science*'
+publication: '*International Journal of Geographical Information Science*, 40(12), 3955-3999'
 abstract: >-
   Road slopes shape mobility patterns and drive the reliability of urban simulations. Yet in most cities,
   road-level slope information remains scarce. We introduce Vision2Slope, a framework that leverages panoramic

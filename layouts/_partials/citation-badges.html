@@ -1,0 +1,15 @@
+{{/* Altmetric + Dimensions citation badges for a page with `hugoblox.ids.doi`.
+     Expects (dict "page" <page> "size" "small"|"large"). Renders nothing without a DOI.
+     The badge scripts are loaded by citation-badges-scripts.html. Both badges stay hidden
+     until there is something to show (no mentions / zero citations). */}}
+{{ $doi := "" }}
+{{ with .page.Params.hugoblox }}{{ with .ids }}{{ with .doi }}{{ $doi = printf "%v" . }}{{ end }}{{ end }}{{ end }}
+{{ with $doi }}
+  {{ $large := eq $.size "large" }}
+  <div class="cite-badges{{ if $large }} cite-badges--large{{ end }}">
+    <span class="__dimensions_badge_embed__" data-doi="{{ . }}" data-hide-zero-citations="true"
+          {{ if $large }}data-style="medium_circle" data-legend="hover-right"{{ else }}data-style="small_rectangle"{{ end }}></span>
+    <div class="altmetric-embed" data-doi="{{ . }}" data-hide-no-mentions="true" data-link-target="_blank"
+         {{ if $large }}data-badge-type="medium-donut" data-badge-popover="right"{{ else }}data-badge-type="1"{{ end }}></div>
+  </div>
+{{ end }}

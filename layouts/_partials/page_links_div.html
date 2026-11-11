@@ -1,0 +1,12 @@
+{{/* Override of the theme's page_links_div: page links, then citation badges on pages with a DOI. */}}
+
+{{ $built := partial "functions/build_links" (dict "page" . "is_list" 0) }}
+{{ if gt (len $built) 0 }}
+<div class="">
+  {{ partial "page_links" (dict "page" . "is_list" 0) }}
+</div>
+{{ end }}
+{{ with .Params.hugoblox }}{{ with .ids }}{{ if .doi }}
+  {{ partial "citation-badges" (dict "page" $ "size" "large") }}
+  {{ partial "citation-badges-scripts" . }}
+{{ end }}{{ end }}{{ end }}

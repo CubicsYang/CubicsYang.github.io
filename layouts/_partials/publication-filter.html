@@ -73,14 +73,15 @@
                data-role="{{ if $first }}first{{ else }}co{{ end }}" data-search="{{ $haystack }}">
             <a class="pubf-cover" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">
               {{ with $cover }}
-                {{ $img := .Fill "150x200 Center q85 webp" }}
-                <img src="{{ $img.RelPermalink }}" width="75" height="100" loading="lazy" decoding="async" alt="">
+                {{ $img := .Fill "240x320 Center q85 webp" }}
+                <img src="{{ $img.RelPermalink }}" width="120" height="160" loading="lazy" decoding="async" alt="">
               {{ else }}
                 <span class="pubf-cover__abbr">{{ $journal.abbr | default (substr $venue 0 4) }}</span>
               {{ end }}
             </a>
             <div class="pubf-item__body">
               {{ partial "views/citation" (dict "item" .) }}
+              {{ partial "citation-badges" (dict "page" . "size" "small") }}
             </div>
           </div>
         {{ end }}
@@ -181,10 +182,14 @@
   .dark .pubf-year__title { color: rgb(244 244 245); }
   .pubf-empty { margin-top: 2rem; color: rgb(113 113 122); }
 
-  .pubf-item { display: flex; gap: 1rem; align-items: flex-start; }
+  .pubf-item { display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem; }
   .pubf-item__body { flex: 1; min-width: 0; }
+  /* The theme puts a 1rem bottom margin on the citation itself; move it to the entry so the
+     citation badges sit directly under the links. */
+  .pubf-item__body .pub-list-item { margin-bottom: 0 !important; }
+  .pubf-item__body .cite-badges { margin-top: 0.35rem; }
   .pubf-cover {
-    flex: none; width: 3.75rem; aspect-ratio: 3 / 4; margin-top: 0.2rem;
+    flex: none; width: 4rem; aspect-ratio: 3 / 4;
     border-radius: 0.25rem; overflow: hidden;
     box-shadow: 0 1px 3px rgb(0 0 0 / 0.18); outline: 1px solid rgb(0 0 0 / 0.06);
     display: flex; align-items: center; justify-content: center;
@@ -194,12 +199,12 @@
   .pubf-cover:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgb(0 0 0 / 0.2); }
   .pubf-cover img { width: 100%; height: 100%; object-fit: cover; margin: 0; }
   .pubf-cover__abbr {
-    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.02em; text-align: center;
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.02em; text-align: center;
     color: rgb(82 82 91); padding: 0 0.25rem; line-height: 1.15; overflow-wrap: anywhere;
   }
   .dark .pubf-cover { background: rgb(39 39 42); outline-color: rgb(255 255 255 / 0.08); }
   .dark .pubf-cover__abbr { color: rgb(212 212 216); }
-  @media (min-width: 640px) { .pubf-cover { width: 4.5rem; } }
+  @media (min-width: 640px) { .pubf-cover { width: 5.25rem; } }
   .pubf-year[hidden], .pubf-item[hidden] { display: none; }
 </style>
 
@@ -279,3 +284,5 @@
   apply();
 })();
 </script>
+
+{{ partial "citation-badges-scripts" . }}
